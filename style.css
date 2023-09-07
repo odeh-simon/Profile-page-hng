@@ -1,0 +1,86 @@
+/* Center the entire content vertically and horizontally */
+body{
+    background-color: #16130f;
+}
+
+.container {
+    background-color: rgb(253, 252, 250);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 500px;
+    text-align: center;
+    margin-left: 35%;
+    margin-top: 10%;
+    border: 1px solid #dbd9d9;
+    border-radius: 10px;
+}
+
+/* Style for the Slack Name */
+#slackUserName {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style for the Slack Display Picture */
+.profileImage {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Style for the Current Day of the Week */
+#currentDayOfTheWeek {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Style for the Current UTC Time */
+#currentUTCTime {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Style for the Track */
+#myTrack {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Style for the GitHub URL */
+#githubURL {
+    font-size: 18px;
+    text-decoration: none;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+/* Style for the GitHub URL on hover */
+#githubURL:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    /* Media query for phone and smaller desktop and laptop sizes */
+    
+    /* Center all elements vertically and horizontally */
+    .centered-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  
+    /* Adjust the image size for smaller screens */
+    #slackDisplayImage {
+      width: 50%; 
+      height: auto;
+    }
+  }
+  

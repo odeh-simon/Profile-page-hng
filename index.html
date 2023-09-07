@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HNG Task-1</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+   <div class="container">
+    <!--*****************************User name************************-->
+    <p data-testid="slackUserName" id="slackUserName"> Simon Odeh</p>
+
+    <!--************************************profile image************************-->
+    <picture >
+        <img src="/Images/myProfile.jpg" class="profileImage" alt="simon_Odeh" data-testid="slackDisplayImage">
+    </picture>
+
+    <!--*******************************Date & Time*************************-->
+    <div data-testid="currentDayOfTheWeek" id="currentDayOfTheWeek"></div>
+    <div data-testid="currentUTCTime" id="currentUTCTime"></div>
+
+ <!--************************Track**************************-->   
+    <p data-testid="myTrack" id="myTrack">Track: Frontend</p>
+
+  <!--********************************github profile********************-->  
+    <a href="https://github.com/odeh-simon" data-testid="githubURL" id="githubURL">My Github Repository</a>
+
+   </div> 
+
+   <script src="/app.js"></script>
+</body>
+</html>
