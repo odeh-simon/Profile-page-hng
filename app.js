@@ -1,6 +1,5 @@
 function updateTime() {
-    const currentTimeElement = document.getElementById('currentUTCTime');
-    const currentDayElement = document.getElementById('currentDayOfTheWeek');
+    const dateTimeContainer = document.getElementById('dateTimeContainer');
     const currentDate = new Date();
 
     // Get the current time in milliseconds
@@ -10,9 +9,11 @@ function updateTime() {
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const dayOfWeek = daysOfWeek[currentDate.getUTCDay()];
 
-    // Format the current time in milliseconds
-    currentTimeElement.textContent = ` ${currentTimeMilliseconds}`;
-    currentDayElement.textContent = ` ${dayOfWeek}`;
+    // Format the current time in milliseconds and day of the week
+    const formattedDateTime = `${dayOfWeek} ${currentTimeMilliseconds}`;
+
+    // Set the text content of the dateTimeContainer
+    dateTimeContainer.textContent = formattedDateTime;
 }
 
 // Call updateTime immediately to display the time and day when the page loads
