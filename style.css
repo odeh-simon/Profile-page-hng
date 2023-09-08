@@ -83,7 +83,7 @@ body{
     /* Adjust the image size for smaller screens */
     [data-testid="slackDisplayImage"] {
       width: 50%; 
-      height: auto;
+      height: 100vh;
     }
   }
   
