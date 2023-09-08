@@ -1,21 +1,34 @@
 function updateTime() {
-    const currentTimeElement = document.getElementById('currentUTCTime');
+    const currentLocalTimeElement = document.getElementById('currentUTCTime');
+    const currentMillisElement = document.getElementById('currentUTCTimeInMillisecond');
     const currentDayElement = document.getElementById('currentDayOfTheWeek');
     const currentDate = new Date();
 
-    // Get the current time in milliseconds
-    const currentTimeMilliseconds = currentDate.getTime();
+    // Calculate the local time zone offset for Nigeria (WAT)
+    const nigeriaOffsetMinutes = 60;
+    const nigeriaOffsetMilliseconds = nigeriaOffsetMinutes * 60 * 1000;
+
+    // Adjust the current time by adding the Nigeria offset
+    const localTimeMilliseconds = currentDate.getTime() + nigeriaOffsetMilliseconds;
+
+    // Format the local time as hours:minutes:seconds
+    const localDate = new Date(localTimeMilliseconds);
+    const hours = String(localDate.getUTCHours()).padStart(2, '0');
+    const minutes = String(localDate.getUTCMinutes()).padStart(2, '0');
+    const seconds = String(localDate.getUTCSeconds()).padStart(2, '0');
+    const formattedTime = `${hours}:${minutes}:${seconds}`;
 
     // Get the current day of the week
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const dayOfWeek = daysOfWeek[currentDate.getUTCDay()];
+    const dayOfWeek = daysOfWeek[localDate.getUTCDay()];
 
-    currentTimeElement.textContent = ` ${currentTimeMilliseconds}`;
+    currentLocalTimeElement.textContent = ` ${formattedTime}`;
+    currentMillisElement.textContent = ` ${localTimeMilliseconds}`;
     currentDayElement.textContent = ` ${dayOfWeek}`;
 }
 
-// Call updateTime immediately to display the time and day when the page loads
+// Call updateTime immediately to display the time when the page loads
 updateTime();
 
-// Update the time and day every millisecond (1 millisecond)
-setInterval(updateTime, 1);
+// Update the time every second (1000 milliseconds)
+setInterval(updateTime, 1000);
