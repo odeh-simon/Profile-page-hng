@@ -78,6 +78,7 @@ body{
       width: 100%;
       border: 0px ;
       border-radius: 0%;
+      height: 100vh;
     }
   
     /* Adjust the image size for smaller screens */
