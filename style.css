@@ -19,7 +19,7 @@ body{
 }
 
 /* Style for the Slack Name */
-#slackUserName {
+[data-testid="slackUserName"]  {
     font-size: 24px;
     margin-bottom: 20px;
 }
@@ -33,25 +33,25 @@ body{
 }
 
 /* Style for the Current Day of the Week */
-#currentDayOfTheWeek {
+[data-testid="currentDayOfTheWeek"]  {
     font-size: 20px;
     margin-bottom: 20px;
 }
 
 /* Style for the Current UTC Time */
-#currentUTCTime {
+[data-testid="currentUTCTime"]  {
     font-size: 18px;
     margin-bottom: 20px;
 }
 
 /* Style for the Track */
-#myTrack {
+[data-testid="myTrack"] {
     font-size: 20px;
     margin-bottom: 20px;
 }
 
 /* Style for the GitHub URL */
-#githubURL {
+[data-testid="githubURL"] {
     font-size: 18px;
     text-decoration: none;
     color: #007BFF;
@@ -59,7 +59,7 @@ body{
 }
 
 /* Style for the GitHub URL on hover */
-#githubURL:hover {
+[data-testid="githubURL"] :hover {
     text-decoration: underline;
 }
 
@@ -78,11 +78,10 @@ body{
       width: 100%;
       border: 0px ;
       border-radius: 0%;
-      height: 100vh;
     }
   
     /* Adjust the image size for smaller screens */
-    #slackDisplayImage {
+    [data-testid="slackDisplayImage"] {
       width: 50%; 
       height: auto;
     }
