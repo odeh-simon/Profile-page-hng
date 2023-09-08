@@ -25,7 +25,7 @@ body{
 }
 
 /* Style for the Slack Display Picture */
-.profileImage {
+[data-testid="slackDisplayImage"] {
     width: 300px;
     height: 300px;
     border-radius: 50%;
